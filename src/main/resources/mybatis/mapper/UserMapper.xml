@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.example.demo.mapper.UserMapper">
+
+    <select id="getAllUser" resultType="com.example.demo.entity.User">
+        SELECT * FROM user
+    </select>
+   <!-- <select id="getAllUserByName" parameterType="String" resultType="com.example.demo.entity.User">
+        SELECT name,id FROM user where name=#{value}
+    </select>-->
+    <select id="loginPage" parameterType="String" resultType="com.example.demo.entity.User">
+        SELECT name FROM user where name=#{0} and id=#{1}
+    </select>
+</mapper>

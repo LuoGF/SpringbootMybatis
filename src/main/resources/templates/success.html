@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script
+            src="../js/jquery-2.1.1.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+<body>
+成功登陆
+
+<marquee direction="left" behavior="alternate"><span id="name"></span>
+</marquee>
+</body>
+<script type="text/javascript">
+
+    $(function(){
+
+            var url=window.location.href;
+            var records=url.split("=");
+
+            //var obj=eval('(' + records[1] + ')');
+            document.getElementById("name").innerHTML= records[1];;
+            //          $("#name").html(obj.username) ;
+
+            // console.log(records);
+            // alert( records[1]);
+        }
+
+    )
+
+
+
+
+</script>
+<!-- <script type="text/javascript">
+	$(function(){
+		$.ajax({
+			type:'GET',
+			/* dataType:'json', */
+			dataType:'text',
+			url:'http://localhost:8080/panhai/d',
+			contentType:'application/json;charset=UTF-8',
+
+			/* data:JSON.stringify({"username":username,"password":password}), */
+
+			success:function(data){//返回json结果
+
+			alert(data);
+
+			}
+
+
+		});
+	})
+</script> -->
+</html>
